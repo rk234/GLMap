@@ -25,7 +25,6 @@ class GeoJSONLayer extends Layer {
      * @param {Renderer} renderer 
      */
     init(renderer) {
-        //console.log("Init")
         const pathsRaw = this.chunkPath(this.geoJSONToPath(this.geojson), 10000)
         console.log(pathsRaw.length)
         pathsRaw.forEach(path => {
@@ -112,7 +111,6 @@ class GeoJSONLayer extends Layer {
         
         for (index = 0; index < arrayLength; index += chunkSize) {
             var myChunk = path.slice(index, index+chunkSize);
-            // Do something if you want with the group
             tempArray.push(myChunk);
         }
 
